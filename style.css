@@ -62,11 +62,10 @@ body {
 
 /* Cards container styles */
 .cards-container {
-  /* On desktop, show cards in a row and allow horizontal scroll */
   display: flex;
   overflow-x: auto;
   gap: 16px; /* Space between cards */
-  padding: 16px 0;
+  padding: 16px 20px; /* Add padding to left and right sides */
 }
 
 /* Card styles */
@@ -115,4 +114,5 @@ body {
   text-align: center; /* Center the text */
   padding: 40px 20px; /* Add space inside the section */
   margin-bottom: 32px; /* Space below the section */
+}
 }

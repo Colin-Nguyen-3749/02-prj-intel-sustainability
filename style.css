@@ -28,6 +28,7 @@ body {
   justify-content: center; /* Vertically center content */
   text-align: center;
   min-height: 300px; /* Minimum height for the hero section */
+  overflow: hidden;   /* Hide streaks outside the hero */
 }
 
 /* Logo style */
@@ -174,6 +175,57 @@ body {
   pointer-events: auto;
 }
 
+/* Add animated light blue streaks to the hero section */
+.hero-streaks {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Individual streak style */
+.hero-streak {
+  position: absolute;
+  height: 4px;
+  width: 120px;
+  background: linear-gradient(90deg, rgba(33,150,243,0.15) 0%, rgba(33,150,243,0.5) 50%, rgba(33,150,243,0.15) 100%);
+  border-radius: 2px;
+  opacity: 0.7;
+  animation: streak-move 2.5s linear infinite;
+}
+
+/* Different streaks start at different times and positions */
+.hero-streak.streak1 { top: 15%; left: -150px; animation-delay: 0s; }
+.hero-streak.streak2 { top: 30%; left: -200px; animation-delay: 0.7s; width: 180px; opacity: 0.5; }
+.hero-streak.streak3 { top: 45%; left: -100px; animation-delay: 1.2s; width: 90px; opacity: 0.4; }
+.hero-streak.streak4 { top: 60%; left: -180px; animation-delay: 1.7s; width: 140px; opacity: 0.6; }
+.hero-streak.streak5 { top: 75%; left: -120px; animation-delay: 2.1s; width: 110px; opacity: 0.5; }
+.hero-streak.streak6 { top: 85%; left: -160px; animation-delay: 1.4s; width: 160px; opacity: 0.3; }
+
+/* Keyframes for streak movement */
+@keyframes streak-move {
+  0% {
+    left: -200px;
+    opacity: 0.7;
+  }
+  80% {
+    opacity: 0.7;
+  }
+  100% {
+    left: 100vw;
+    opacity: 0;
+  }
+}
+
+/* Make sure hero content is above the streaks */
+.hero > *:not(.hero-streaks) {
+  position: relative;
+  z-index: 2;
+}
+
 /* Responsive: On small screens, stack cards vertically */
 @media (max-width: 1240px) {
   .cards-container {
@@ -203,6 +255,20 @@ body {
 .welcome-section {
   background: linear-gradient(135deg, #0a2342 0%, #185a9d 100%);
   color: #fff; /* Make text white for readability */
+  text-align: center; /* Center the text */
+  padding: 40px 20px; /* Add space inside the section */
+  margin-bottom: 32px; /* Space below the section */
+}
+
+/* Bottom info section styles */
+.bottom-info-section {
+  background: #0a2342; /* Dark blue background */
+  color: #fff;         /* White text for readability */
+  text-align: center;  /* Center the text */
+  padding: 20px 10px;  /* Add space above and below */
+  font-size: 1em;      /* Normal readable size */
+  margin-top: 0;       /* Remove extra space above so it's right below the cards */
+}
   text-align: center; /* Center the text */
   padding: 40px 20px; /* Add space inside the section */
   margin-bottom: 32px; /* Space below the section */

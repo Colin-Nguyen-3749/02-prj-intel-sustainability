@@ -114,6 +114,44 @@ body {
   margin-bottom: 12px;  /* Add some space below the image */
 }
 
+/* Special hover overlay for the first card */
+.card.first-card {
+  position: relative; /* Needed for overlay positioning */
+  overflow: hidden;   /* Hide overlay outside card */
+}
+
+/* The overlay itself (hidden by default) */
+.card.first-card .card-hover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 35, 66, 0.92); /* Dark blue, mostly opaque */
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Center the text horizontally and vertically */
+  text-align: center;
+  opacity: 0;           /* Start hidden */
+  transition: opacity 0.3s;
+  padding: 20px;
+  font-size: 1em;
+  z-index: 2;
+  pointer-events: none; /* Prevent accidental clicks when not visible */
+  box-sizing: border-box; /* Make sure padding fits inside the card */
+  /* Make sure text wraps and fits nicely */
+  word-break: break-word;
+  line-height: 1.4;
+}
+
+/* Show overlay on hover */
+.card.first-card:hover .card-hover-overlay {
+  opacity: 1;
+  pointer-events: auto; /* Allow interaction when visible */
+}
+
 /* Responsive: On small screens, stack cards vertically */
 @media (max-width: 1240px) {
   .cards-container {

@@ -28,9 +28,9 @@
   margin-bottom: 0;
 }
 
-/* Remove styles for the old blue box if present */
-/* Example:
-.old-blue-box {
+/* Remove or comment out styles for the blue box under the hero if present */
+/*
+.blue-box-under-hero {
   display: none;
 }
 */

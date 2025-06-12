@@ -114,16 +114,30 @@ body {
   margin-bottom: 12px;  /* Add some space below the image */
 }
 
-/* Special hover overlay for the first and second card */
+/* Special hover overlay for all cards */
 .card.first-card,
-.card.second-card {
-  position: relative; /* Needed for overlay positioning */
-  overflow: hidden;   /* Hide overlay outside card */
+.card.second-card,
+.card.third-card,
+.card.fourth-card,
+.card.fifth-card,
+.card.sixth-card,
+.card.seventh-card,
+.card.eighth-card,
+.card.ninth-card {
+  position: relative;
+  overflow: hidden;
 }
 
 /* The overlay itself (hidden by default) */
 .card.first-card .card-hover-overlay,
-.card.second-card .card-hover-overlay {
+.card.second-card .card-hover-overlay,
+.card.third-card .card-hover-overlay,
+.card.fourth-card .card-hover-overlay,
+.card.fifth-card .card-hover-overlay,
+.card.sixth-card .card-hover-overlay,
+.card.seventh-card .card-hover-overlay,
+.card.eighth-card .card-hover-overlay,
+.card.ninth-card .card-hover-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -134,25 +148,30 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* Center the text horizontally and vertically */
   text-align: center;
-  opacity: 0;           /* Start hidden */
+  opacity: 0;
   transition: opacity 0.3s;
   padding: 20px;
   font-size: 1em;
   z-index: 2;
-  pointer-events: none; /* Prevent accidental clicks when not visible */
-  box-sizing: border-box; /* Make sure padding fits inside the card */
-  /* Make sure text wraps and fits nicely */
+  pointer-events: none;
+  box-sizing: border-box;
   word-break: break-word;
   line-height: 1.4;
 }
 
 /* Show overlay on hover */
 .card.first-card:hover .card-hover-overlay,
-.card.second-card:hover .card-hover-overlay {
+.card.second-card:hover .card-hover-overlay,
+.card.third-card:hover .card-hover-overlay,
+.card.fourth-card:hover .card-hover-overlay,
+.card.fifth-card:hover .card-hover-overlay,
+.card.sixth-card:hover .card-hover-overlay,
+.card.seventh-card:hover .card-hover-overlay,
+.card.eighth-card:hover .card-hover-overlay,
+.card.ninth-card:hover .card-hover-overlay {
   opacity: 1;
-  pointer-events: auto; /* Allow interaction when visible */
+  pointer-events: auto;
 }
 
 /* Responsive: On small screens, stack cards vertically */

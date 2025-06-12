@@ -1,0 +1,39 @@
+/* ...existing code... */
+
+/* Hero section styles */
+.hero {
+  /* Center the content */
+  text-align: center;
+  /* Add some space above and below */
+  padding: 40px 20px;
+  /* Dark blue gradient background */
+  background: linear-gradient(135deg, #0a2342 0%, #185a9d 100%);
+}
+
+/* Style for the logo image */
+.hero-logo {
+  /* Set a max width so it's not too big */
+  max-width: 200px;
+  /* Add some space below the image */
+  margin-bottom: 20px;
+}
+
+/* Style for the main headline */
+.hero h1 {
+  /* Make the headline bigger */
+  font-size: 2em;
+  /* Add some space below */
+  margin-bottom: 10px;
+  /* White text for good contrast */
+  color: #fff;
+}
+
+/* Style for the subheadline */
+.hero-subheadline {
+  /* Slightly smaller text */
+  font-size: 1.2em;
+  /* Light gray text for readability */
+  color: #e0e0e0;
+}
+
+/* ...existing code... */

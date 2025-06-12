@@ -114,14 +114,16 @@ body {
   margin-bottom: 12px;  /* Add some space below the image */
 }
 
-/* Special hover overlay for the first card */
-.card.first-card {
+/* Special hover overlay for the first and second card */
+.card.first-card,
+.card.second-card {
   position: relative; /* Needed for overlay positioning */
   overflow: hidden;   /* Hide overlay outside card */
 }
 
 /* The overlay itself (hidden by default) */
-.card.first-card .card-hover-overlay {
+.card.first-card .card-hover-overlay,
+.card.second-card .card-hover-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -147,7 +149,8 @@ body {
 }
 
 /* Show overlay on hover */
-.card.first-card:hover .card-hover-overlay {
+.card.first-card:hover .card-hover-overlay,
+.card.second-card:hover .card-hover-overlay {
   opacity: 1;
   pointer-events: auto; /* Allow interaction when visible */
 }

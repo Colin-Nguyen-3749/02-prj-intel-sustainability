@@ -1,1 +1,74 @@
 /* Add your CSS here */
+
+/* Hero section styles */
+.hero {
+  /* Center the content */
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f5f7fa; /* Light background for hero */
+}
+
+/* Logo style */
+.hero-logo {
+  width: 120px; /* Adjust size as needed */
+  margin-bottom: 20px;
+}
+
+/* Headline style */
+.hero-headline {
+  font-size: 2em;
+  margin: 10px 0;
+  color: #0071c5; /* Intel blue */
+}
+
+/* Subheadline style */
+.hero-subheadline {
+  font-size: 1.2em;
+  color: #333;
+  margin-bottom: 0;
+}
+
+/* Remove styles for the old blue box if present */
+/* Example:
+.old-blue-box {
+  display: none;
+}
+*/
+
+/* Cards container styles */
+.cards-container {
+  /* On desktop, show cards in a row and allow horizontal scroll */
+  display: flex;
+  overflow-x: auto;
+  gap: 16px; /* Space between cards */
+  padding: 16px 0;
+}
+
+/* Card styles */
+.card {
+  /* Basic card appearance */
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  min-width: 250px; /* Minimum width for each card */
+  max-width: 300px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  flex: 0 0 25%; /* Show 4 cards at a time on desktop */
+  box-sizing: border-box;
+}
+
+/* Responsive: On small screens, stack cards vertically */
+@media (max-width: 600px) {
+  .cards-container {
+    flex-direction: column;
+    overflow-x: visible; /* No horizontal scroll on mobile */
+    gap: 16px;
+  }
+  .card {
+    min-width: 0;
+    max-width: 100%;
+    width: 100%;
+    flex: none;
+  }
+}

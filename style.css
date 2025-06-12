@@ -3,12 +3,13 @@
 /* Use a modern, sleek font for the whole page */
 body {
   font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+  margin: 0; /* Remove default margin */
 }
 
 /* Hero section styles */
 .hero {
   /* Center the content */
-  padding: 40px 20px;
+  padding: 0 20px; /* Remove top padding so background starts at the very top */
   /* Dark blue gradient background */
   background: linear-gradient(135deg, #0a2342 0%, #185a9d 100%);
   margin-bottom: 32px; /* Add space below the hero section so cards are directly underneath */
@@ -46,7 +47,7 @@ body {
 .hero-subheadline {
   font-size: 1.2em;
   color: #fff; /* White text for readability */
-  margin-bottom: 0;
+  margin-bottom: 32px; /* Bigger space below the subheading */
   /* The text will be updated in the HTML file */
   margin-left: 80px;  /* Even more space on the left */
   margin-right: 80px; /* Even more space on the right */
@@ -80,6 +81,15 @@ body {
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
   flex: 0 0 25%; /* Show 4 cards at a time on desktop */
   box-sizing: border-box;
+}
+
+/* Make images inside cards fit within the card boundaries */
+.card img {
+  max-width: 100%;      /* Image will not be wider than the card */
+  height: auto;         /* Keep the image's aspect ratio */
+  display: block;       /* Remove extra space below the image */
+  border-radius: 6px;   /* Slightly round the image corners for a nice look */
+  margin-bottom: 12px;  /* Add some space below the image */
 }
 
 /* Responsive: On small screens, stack cards vertically */

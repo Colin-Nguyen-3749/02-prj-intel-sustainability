@@ -87,6 +87,24 @@ body {
   scroll-snap-align: start; /* Snap each card to the start of the container */
 }
 
+/* Card h2 heading style */
+.card h2 {
+  color: #2196f3;      /* Bright, readable blue */
+  text-align: center;
+  font-size: 1.15em;
+  margin: 12px 0 6px 0;
+  font-weight: bold;
+}
+
+/* Card h3 heading style */
+.card h3 {
+  color: #0a2342;      /* Darker blue */
+  text-align: center;
+  font-size: 1em;
+  margin: 10px 0 8px 0;
+  font-weight: bold;
+}
+
 /* Make images inside cards fit within the card boundaries */
 .card img {
   max-width: 100%;      /* Image will not be wider than the card */
@@ -135,7 +153,7 @@ body {
   background: #0a2342; /* Dark blue background */
   color: #fff;         /* White text for readability */
   text-align: center;  /* Center the text */
-  padding: 24px 20px;  /* Add space above and below */
-  margin-top: 40px;    /* Space above the section */
-  font-size: 1.1em;    /* Slightly larger text */
+  padding: 20px 10px;  /* Add space above and below */
+  font-size: 1em;      /* Normal readable size */
+  margin-top: 0;       /* Remove extra space above so it's right below the cards */
 }

@@ -8,11 +8,25 @@ body {
 /* Hero section styles */
 .hero {
   /* Center the content */
-  text-align: center;
   padding: 40px 20px;
   /* Dark blue gradient background */
   background: linear-gradient(135deg, #0a2342 0%, #185a9d 100%);
   margin-bottom: 32px; /* Add space below the hero section so cards are directly underneath */
+  /* Make the background stretch to the edges */
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  box-sizing: border-box;
+  /* Use flexbox to arrange content vertically and center it */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Vertically center content */
+  text-align: center;
+  min-height: 300px; /* Minimum height for the hero section */
 }
 
 /* Logo style */
@@ -31,9 +45,11 @@ body {
 /* Subheadline style */
 .hero-subheadline {
   font-size: 1.2em;
-  color: #333;
+  color: #fff; /* White text for readability */
   margin-bottom: 0;
   /* The text will be updated in the HTML file */
+  margin-left: 80px;  /* Even more space on the left */
+  margin-right: 80px; /* Even more space on the right */
 }
 
 /* Remove styles for the old blue box if present */

@@ -6,6 +6,7 @@
   text-align: center;
   padding: 40px 20px;
   background-color: #f5f7fa; /* Light background for hero */
+  margin-bottom: 32px; /* Add space below the hero section so cards are directly underneath */
 }
 
 /* Logo style */
@@ -26,6 +27,7 @@
   font-size: 1.2em;
   color: #333;
   margin-bottom: 0;
+  /* The text will be updated in the HTML file */
 }
 
 /* Remove styles for the old blue box if present */

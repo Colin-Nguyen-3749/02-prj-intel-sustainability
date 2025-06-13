@@ -106,13 +106,19 @@ body {
   font-weight: bold;
 }
 
-/* Make images inside cards fit within the card boundaries */
+/* Make images inside cards the exact same (larger) size */
 .card img {
-  max-width: 100%;      /* Image will not be wider than the card */
-  height: auto;         /* Keep the image's aspect ratio */
-  display: block;       /* Remove extra space below the image */
-  border-radius: 6px;   /* Slightly round the image corners for a nice look */
-  margin-bottom: 12px;  /* Add some space below the image */
+  width: 100%;
+  height: 160px;        /* Increased height for bigger images */
+  object-fit: cover;
+  display: block;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+/* Adjust the first card's image to show the lower part (faces) */
+.card.first-card img {
+  object-position: center 60%; /* Move the image focus lower */
 }
 
 /* Special hover overlay for all cards */
